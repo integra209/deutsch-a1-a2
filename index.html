@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Личный тренажёр немецкого языка A1–A2 на 15 минут в день.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Deutsch — A1–A2</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Deutsch, главная">
+        <span class="brand-mark">de</span>
+        <span><b>Deutsch</b><small>личный тренажёр</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="level-pill">A1 — A2</span>
+        <button class="icon-btn" id="installBtn" hidden aria-label="Установить приложение" title="Установить">↓</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">DEIN DEUTSCH · ЕЖЕДНЕВНАЯ ПРАКТИКА</p>
+          <h1>Немецкий,<br><em>15 минут в день.</em></h1>
+          <p class="hero-sub">Небольшие занятия, полезные слова и уверенный прогресс — в твоём темпе.</p>
+          <button class="primary-btn" id="startBtn">Начать занятие <span>→</span></button>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div><div class="art-card">
+            <span class="art-kicker">WORT DES TAGES</span>
+            <strong>der Alltag</strong>
+            <span>повседневная жизнь</span>
+            <div class="art-line"></div>
+            <span class="art-example">Ich lerne jeden Tag.</span>
+          </div>
+          <span class="art-star star-one">✳</span><span class="art-star star-two">✳</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Твой прогресс">
+        <article class="stat-card"><span class="stat-label">Серия занятий</span><strong id="streak">0 <small>дней</small></strong><span class="stat-note">Регулярность — ключ</span></article>
+        <article class="stat-card"><span class="stat-label">Уроки завершены</span><strong id="lessonsDone">0</strong><span class="stat-note">Шаг за шагом</span></article>
+        <article class="stat-card"><span class="stat-label">Слова изучены</span><strong id="wordsKnown">0</strong><span class="stat-note">Твой словарный запас</span></article>
+      </section>
+
+      <section class="section-heading">
+        <div><p class="eyebrow">HEUTE · СЕГОДНЯ</p><h2>Твой учебный план</h2></div>
+        <span class="time-chip">◷ около 15 минут</span>
+      </section>
+
+      <section class="lesson-card" id="lessonCard">
+        <div class="lesson-meta"><span class="lesson-number" id="lessonNumber">УРОК 01</span><span class="lesson-tag" id="lessonTag">ЛЕКСИКА · ALLTAG</span></div>
+        <h3 id="lessonTitle">Повседневная жизнь</h3>
+        <p id="lessonDescription">10 полезных слов, короткая практика и мини-проверка.</p>
+        <div class="lesson-progress"><span id="lessonProgress"></span></div>
+        <div class="lesson-footer"><span id="lessonStatus">Можно начинать</span><button class="text-btn" id="continueBtn">Открыть урок →</button></div>
+      </section>
+
+      <section class="bottom-grid">
+        <article class="small-panel">
+          <div class="panel-icon">✦</div><p class="eyebrow">WIEDERHOLUNG</p><h3>Повторение слов</h3>
+          <p>Возвращайся к словам, которые пока сложно вспомнить.</p>
+          <button class="secondary-btn" id="reviewBtn">Повторить слова</button>
+        </article>
+        <article class="small-panel quote-panel">
+          <p class="eyebrow">KLEINER SCHRITT</p>
+          <blockquote>„Übung macht den Meister.“</blockquote>
+          <p>Практика ведёт к мастерству.</p>
+        </article>
+      </section>
+      <p class="privacy-note"><span>●</span> Твои результаты хранятся только на этом устройстве.</p>
+    </main>
+    <footer><span>DEUTSCH A1–A2</span><span>MIT RUHE. MIT SYSTEM.</span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="lessonModal" hidden>
+    <section class="lesson-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-top"><span class="eyebrow" id="modalStep">ШАГ 1 ИЗ 4</span><button class="close-btn" id="closeModal" aria-label="Закрыть">×</button></div>
+      <div class="modal-progress"><span id="modalProgress"></span></div>
+      <div id="lessonContent"></div>
+      <div class="modal-nav"><button class="secondary-btn" id="backBtn" disabled>Назад</button><button class="primary-btn" id="nextBtn">Далее <span>→</span></button></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
