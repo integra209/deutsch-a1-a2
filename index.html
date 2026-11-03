@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f6f5f0">
+  <meta name="theme-color" content="#17385f">
   <meta name="description" content="Личный тренажёр немецкого языка A1–A2 на 15 минут в день.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icon-180.png">
   <link rel="stylesheet" href="styles.css">
-  <title>Deutsch — A1–A2</title>
+  <title>Deutsch Meister — A1–A2</title>
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="#" aria-label="Deutsch, главная">
         <span class="brand-mark">de</span>
-        <span><b>Deutsch</b><small>личный тренажёр</small></span>
+        <span><b>Deutsch Meister</b><small>твой путь к Goethe-Zertifikat A2</small></span>
       </a>
       <div class="top-actions">
         <span class="level-pill">A1 — A2</span>
@@ -27,9 +27,9 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">DEIN DEUTSCH · ЕЖЕДНЕВНАЯ ПРАКТИКА</p>
-          <h1>Немецкий,<br><em>15 минут в день.</em></h1>
-          <p class="hero-sub">Небольшие занятия, полезные слова и уверенный прогресс — в твоём темпе.</p>
+          <p class="eyebrow">DEIN DEUTSCH · GOETHE-ZERTIFIKAT A2</p>
+          <h1>Твоё немецкое<br><em>начинается здесь.</em></h1>
+          <p class="hero-sub">Слова, живые предложения и спокойная подготовка к Goethe-Zertifikat A2 — в твоём темпе.</p>
           <button class="primary-btn" id="startBtn">Начать занятие <span>→</span></button>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -63,6 +63,8 @@
         <div class="lesson-footer"><span id="lessonStatus">Можно начинать</span><button class="text-btn" id="continueBtn">Открыть урок →</button></div>
       </section>
 
+      <section class="section-heading exam-heading"><div><p class="eyebrow">DEIN ZIEL · ТВОЯ ЦЕЛЬ</p><h2>Путь к Goethe A2</h2></div><span class="time-chip">A1 → A2</span></section>
+      <section class="lesson-card exam-card"><div class="lesson-meta"><span class="lesson-number">ЭКЗАМЕНАЦИОННАЯ ПРАКТИКА</span><span class="lesson-tag">GOETHE</span></div><h3>Четыре навыка — одна цель</h3><p>Постепенно добавим чтение, аудирование, письмо и разговорную практику. Сначала укрепим словарный запас.</p><div class="exam-skills"><span>Lesen · Чтение</span><span>Hören · Аудирование</span><span>Schreiben · Письмо</span><span>Sprechen · Речь</span></div><button class="secondary-btn" id="examBtn">Открыть тренировку A2</button></section>
       <section class="bottom-grid">
         <article class="small-panel">
           <div class="panel-icon">✦</div><p class="eyebrow">WIEDERHOLUNG</p><h3>Повторение слов</h3>
@@ -75,9 +77,10 @@
           <p>Практика ведёт к мастерству.</p>
         </article>
       </section>
+      <section class="small-panel reminder-panel"><p class="eyebrow">ERINNERUNG · ПО ЖЕЛАНИЮ</p><h3>Напоминать о занятиях?</h3><p>Включай уведомления только если они тебе нужны. Время можно выбрать в настройках устройства.</p><button class="secondary-btn" id="reminderBtn">Включить напоминания</button><span class="reminder-status" id="reminderStatus">Сейчас выключены</span></section>
       <p class="privacy-note"><span>●</span> Твои результаты хранятся только на этом устройстве.</p>
     </main>
-    <footer><span>DEUTSCH A1–A2</span><span>MIT RUHE. MIT SYSTEM.</span></footer>
+    <footer><span>DEUTSCH MEISTER</span><span>GOETHE A2 · SCHRITT FÜR SCHRITT</span></footer>
   </div>
 
   <div class="modal-backdrop" id="lessonModal" hidden>

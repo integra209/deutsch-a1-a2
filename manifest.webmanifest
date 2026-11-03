@@ -1,13 +1,13 @@
 {
-  "name": "Deutsch A1–A2 — личный тренажёр",
-  "short_name": "Deutsch",
+  "name": "Deutsch Meister — Goethe A2",
+  "short_name": "Deutsch Meister",
   "description": "Ежедневные занятия немецким по 15 минут.",
   "lang": "ru",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f6f5f0",
-  "theme_color": "#f6f5f0",
+  "theme_color": "#17385f",
   "icons": [
     {
       "src": "icons/icon-180.png",

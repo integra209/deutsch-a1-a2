@@ -20,6 +20,26 @@ const lessons = [
  tasks:[["Я звоню тебе вечером.","Ich rufe dich am Abend an."],["Она убирает комнату.","Sie räumt das Zimmer auf."],["Мы смотрим телевизор.","Wir sehen fern."],["Фильм начинается в восемь.","Der Film fängt um acht an."],["Открой, пожалуйста, окно.","Mach bitte das Fenster auf."]],
  quiz:[["Ich ____ dich später an. (anrufen)","rufe"],["Sie räumt das Zimmer ____.","auf"],["Wir sehen am Abend ____.","fern"],["Der Film ____ um acht an.","fängt"],["Mach bitte die Tür ____.","zu"]]}
 ];
+
+// Расширенный маршрут A1–A2: темы подобраны как основа словарной подготовки к Goethe-Zertifikat A2.
+const extraTopics = [
+ ["Семья и отношения","FAMILIE",["die Familie|семья|Meine Familie ist groß.","die Eltern|родители|Meine Eltern wohnen in Berlin.","der Bruder|брат|Mein Bruder ist älter.","die Schwester|сестра|Meine Schwester lernt Deutsch.","verheiratet|женат / замужем|Sie ist verheiratet.","ledig|не женат / не замужем|Ich bin ledig.","besuchen|навещать|Wir besuchen unsere Oma.","zusammen|вместе|Wir wohnen zusammen.","das Kind|ребёнок|Das Kind spielt im Garten.","die Verwandten|родственники|Meine Verwandten kommen heute."]],
+ ["Работа и профессии","ARBEIT",["der Beruf|профессия|Was sind Sie von Beruf?","die Ausbildung|профессиональное обучение|Meine Ausbildung dauert drei Jahre.","der Kollege|коллега|Mein Kollege ist freundlich.","die Bewerbung|заявление о приёме|Ich schreibe eine Bewerbung.","verdienen|зарабатывать|Sie verdient gut.","die Erfahrung|опыт|Ich habe viel Erfahrung.","das Büro|офис|Das Büro ist im Zentrum.","die Pause|перерыв|Wir machen eine Pause.","pünktlich|пунктуальный|Er ist immer pünktlich.","kündigen|увольняться|Sie möchte kündigen."]],
+ ["Здоровье и самочувствие","GESUNDHEIT",["der Termin|приём, запись|Ich habe morgen einen Termin.","die Schmerzen|боли|Ich habe Kopfschmerzen.","die Apotheke|аптека|Die Apotheke ist geöffnet.","das Rezept|рецепт|Der Arzt gibt mir ein Rezept.","die Untersuchung|обследование|Die Untersuchung dauert zehn Minuten.","krank|больной|Heute bin ich krank.","gesund|здоровый|Obst ist gesund.","sich fühlen|чувствовать себя|Wie fühlst du dich?","das Medikament|лекарство|Nehmen Sie das Medikament.","die Krankmeldung|больничный лист|Ich brauche eine Krankmeldung."]],
+ ["Жильё и быт","WOHNEN",["die Miete|арендная плата|Die Miete ist teuer.","der Vermieter|арендодатель|Der Vermieter ist freundlich.","die Nebenkosten|коммунальные расходы|Die Nebenkosten sind inklusive.","umziehen|переезжать|Wir ziehen im Mai um.","die Heizung|отопление|Die Heizung funktioniert nicht.","der Schlüssel|ключ|Ich finde meinen Schlüssel nicht.","der Aufzug|лифт|Der Aufzug ist kaputt.","die Nachbarn|соседи|Unsere Nachbarn sind nett.","möbliert|меблированный|Die Wohnung ist möbliert.","die Besichtigung|просмотр|Die Besichtigung ist am Samstag."]],
+ ["Свободное время и поездки","FREIZEIT",["die Einladung|приглашение|Danke für die Einladung.","verabreden|договариваться о встрече|Wir verabreden uns für Freitag.","die Veranstaltung|мероприятие|Die Veranstaltung beginnt um sechs.","die Sehenswürdigkeit|достопримечательность|Das ist eine Sehenswürdigkeit.","die Übernachtung|ночёвка|Die Übernachtung kostet 40 Euro.","buchen|бронировать|Ich möchte ein Zimmer buchen.","die Verspätung|опоздание|Der Zug hat Verspätung.","die Unterkunft|жильё|Unsere Unterkunft ist zentral.","teilnehmen|участвовать|Ich nehme am Kurs teil.","empfehlen|рекомендовать|Was können Sie empfehlen?"]],
+ ["Общение и повседневные ситуации","KOMMUNIKATION",["die Nachricht|сообщение|Ich schreibe dir eine Nachricht.","Bescheid sagen|сообщить|Bitte sag mir Bescheid.","sich entschuldigen|извиняться|Ich möchte mich entschuldigen.","vereinbaren|согласовывать|Wir vereinbaren einen Termin.","absagen|отменять|Ich muss den Termin absagen.","erklären|объяснять|Können Sie das erklären?","wiederholen|повторять|Können Sie das bitte wiederholen?","die Meinung|мнение|Das ist meine Meinung.","zustimmen|соглашаться|Ich stimme dir zu.","vorschlagen|предлагать|Ich schlage einen Spaziergang vor."]],
+ ["Погода, природа и окружающая среда","WETTER",["das Wetter|погода|Das Wetter ist heute schön.","die Temperatur|температура|Die Temperatur liegt bei zehn Grad.","der Regen|дождь|Wegen des Regens bleiben wir zu Hause.","scheinen|светить|Die Sonne scheint.","bewölkt|облачно|Morgen ist es bewölkt.","die Umwelt|окружающая среда|Wir schützen die Umwelt.","der Müll|мусор|Bitte trenne den Müll.","die Landschaft|пейзаж|Die Landschaft ist wunderschön.","trocken|сухой|Im Sommer ist es oft trocken.","wahrscheinlich|вероятно|Wahrscheinlich regnet es morgen."]],
+ ["Экзаменационная лексика A2","GOETHE A2",["die Anzeige|объявление|Ich lese eine Anzeige.","die Information|информация|Danke für die Information.","die Öffnungszeiten|часы работы|Wie sind die Öffnungszeiten?","die Möglichkeit|возможность|Gibt es eine andere Möglichkeit?","die Voraussetzung|условие|Das ist eine wichtige Voraussetzung.","die Anmeldung|регистрация|Die Anmeldung ist online.","die Teilnahme|участие|Die Teilnahme ist kostenlos.","der Vorschlag|предложение|Das ist ein guter Vorschlag.","die Nachricht|сообщение|Ich habe deine Nachricht gelesen.","der Grund|причина|Was ist der Grund?"]]
+];
+for (const [title,tag,rows] of extraTopics) {
+ const words=rows.map(r=>r.split("|"));
+ lessons.push({title,tag:`A2 · ${tag}`,desc:"10 слов по теме, применение в предложениях и проверка.",words,
+  recall:words.slice(0,5).map(w=>[w[0],w[1]]),
+  tasks:words.slice(0,5).map(w=>[`Составь предложение со словом «${w[0]}» (${w[1]})`,w[2]]),
+  quiz:words.slice(5,10).map(w=>[`Напиши по-немецки: ${w[1]}`,w[0]])});
+}
+
 const stateKey="deutsch-a1a2-v1";
 let state=JSON.parse(localStorage.getItem(stateKey)||'{"done":[],"completedCount":0,"known":[],"difficult":[],"lastDate":"","streak":0}');
 let lessonIndex=0,step=0,answersChecked=false;
@@ -45,7 +65,7 @@ function renderStep(){
  if(step===0){
   html=`<h2 class="step-title">Сначала вспомним</h2><p class="step-desc">Переведи слова на немецкий. Вспоминай самостоятельно — это помогает запоминанию.</p><div class="exercise-list">${l.recall.map((x,i)=>`<div class="exercise"><label>${i+1}. ${x[0]}</label><input data-kind="recall" data-i="${i}" placeholder="Перевод на немецком" autocomplete="off"></div>`).join("")}</div>`;
  }else if(step===1){
-  html=`<h2 class="step-title">Новые слова</h2><p class="step-desc">Прочитай слова, обрати внимание на артикли и примеры. Нажми «Знаю», если слово уже знакомо.</p><div class="vocab-list">${l.words.map((w,i)=>`<article class="vocab-item"><div class="vocab-top"><span class="vocab-word">${w[0]}</span><button data-known="${i}">${state.known.includes(w[0])?"✓ знаю":"+ знаю"}</button></div><div class="vocab-translation">${w[1]}</div><div class="vocab-example">${w[2]}</div></article>`).join("")}</div>`;
+  html=`<h2 class="step-title">Новые слова</h2><p class="step-desc">Прочитай слова, обрати внимание на артикли и примеры. Нажми «Знаю», если слово уже знакомо.</p><div class="vocab-list">${l.words.map((w,i)=>`<article class="vocab-item"><div class="vocab-top"><span class="vocab-word">${w[0]}</span><button class="speak-btn" data-speak="${w[0]}">🔊</button><button data-known="${i}">${state.known.includes(w[0])?"✓ знаю":"+ знаю"}</button></div><div class="vocab-translation">${w[1]}</div><div class="vocab-example">${w[2]}</div></article>`).join("")}</div>`;
  }else if(step===2){
   const grammar=l.grammar?`<div class="grammar-box"><b>Правило.</b> У отделяемых глаголов приставка в простом повествовательном предложении уходит в конец: <b>aufstehen → Ich stehe um 7 Uhr auf.</b><br>Спрягаем основную часть глагола, а приставку ставим после остальных слов. В вопросе без вопросительного слова глагол стоит первым: <b>Stehst du früh auf?</b></div><br>`:"";
   html=`<h2 class="step-title">${l.grammar?"Немного грамматики":"Применяем новые слова"}</h2><p class="step-desc">${l.grammar?"Отделяемая приставка не теряется — она перемещается в конец предложения.":"Переведи предложения на немецкий. Не стремись к дословному переводу — важен естественный немецкий."}</p>${grammar}<div class="exercise-list">${l.tasks.map((x,i)=>`<div class="exercise"><label>${i+1}. ${x[0]}</label><input data-kind="task" data-i="${i}" placeholder="Твой вариант на немецком" autocomplete="off"></div>`).join("")}</div>`;
@@ -53,6 +73,7 @@ function renderStep(){
   html=`<h2 class="step-title">Финальная проверка</h2><p class="step-desc">Вставь пропущенное слово или часть глагола.</p><div class="exercise-list">${l.quiz.map((x,i)=>`<div class="exercise"><label>${i+1}. ${x[0]}</label><input data-kind="quiz" data-i="${i}" placeholder="Ответ" autocomplete="off"></div>`).join("")}</div><div id="checkResult"></div>`;
  }
  $("lessonContent").innerHTML=html;
+ document.querySelectorAll("[data-speak]").forEach(b=>b.addEventListener("click",()=>speak(b.dataset.speak)));
  document.querySelectorAll("[data-known]").forEach(b=>b.addEventListener("click",()=>{const w=l.words[+b.dataset.known][0];state.known=state.known.includes(w)?state.known.filter(x=>x!==w):[...state.known,w];save();b.textContent=state.known.includes(w)?"✓ знаю":"+ знаю"}));
  document.querySelectorAll("input").forEach(inp=>{const k=`${lessonIndex}-${step}-${inp.dataset.kind}-${inp.dataset.i}`;inp.value=sessionStorage.getItem(k)||"";inp.addEventListener("input",()=>sessionStorage.setItem(k,inp.value))});
 }
@@ -79,6 +100,8 @@ function next(){
  save();closeLesson();toast("Урок завершён. Sehr gut!");renderStats();
 }
 function back(){if(step>0){step--;answersChecked=false;renderStep()}}
+function speak(text){if(!("speechSynthesis" in window)){toast("Озвучивание недоступно в этом браузере");return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="de-DE";u.rate=.88;speechSynthesis.speak(u)}
+function examPractice(){lessonIndex=lessons.length-1;step=2;answersChecked=false;renderStep();$("lessonModal").hidden=false;document.body.style.overflow="hidden";toast("Тренировка на лексике уровня A2")}
 function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2300)}
 function review(){
  const list=state.difficult.length?state.difficult:lessons.flatMap(l=>l.words.map(w=>w[0])).filter(w=>!state.known.includes(w)).slice(0,10);
@@ -89,6 +112,8 @@ function review(){
  document.querySelectorAll(".reveal").forEach(b=>b.addEventListener("click",()=>{b.nextElementSibling.hidden=false;b.textContent="Перевод"}));
 }
 $("startBtn").addEventListener("click",openLesson);$("continueBtn").addEventListener("click",openLesson);$("closeModal").addEventListener("click",closeLesson);$("backBtn").addEventListener("click",back);$("nextBtn").addEventListener("click",()=>{if($("modalStep").textContent==="ПОВТОРЕНИЕ"){closeLesson();$("nextBtn").onclick=null;return}next()});$("reviewBtn").addEventListener("click",review);
+if($("examBtn"))$("examBtn").addEventListener("click",examPractice);
+if($("reminderBtn"))$("reminderBtn").addEventListener("click",async()=>{if(!("Notification" in window)){toast("Уведомления не поддерживаются этим браузером");return}const permission=await Notification.requestPermission();$("reminderStatus").textContent=permission==="granted"?"Разрешение получено. Настрой время в устройстве.":"Уведомления не разрешены";toast(permission==="granted"?"Разрешение на уведомления включено":"Уведомления остались выключены")});
 renderStats();
 let installEvent;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();installEvent=e;$("installBtn").hidden=false});
 $("installBtn").addEventListener("click",async()=>{if(!installEvent)return;installEvent.prompt();await installEvent.userChoice;installEvent=null;$("installBtn").hidden=true});
