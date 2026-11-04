@@ -1,98 +1,24 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#17385f">
-  <meta name="description" content="Личный тренажёр немецкого языка A1–A2 на 15 минут в день.">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icons/icon-180.png">
-  <link rel="stylesheet" href="styles.css">
-  <title>Deutsch Meister — A1–A2</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#18385f"><meta name="description" content="Deutsch Meister — немецкий A1–A2 и подготовка к Goethe-Zertifikat A2.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"><title>Deutsch Meister — A1–A2</title>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="Deutsch, главная">
-        <span class="brand-mark">de</span>
-        <span><b>Deutsch Meister</b><small>твой путь к Goethe-Zertifikat A2</small></span>
-      </a>
-      <div class="top-actions">
-        <span class="level-pill">A1 — A2</span>
-        <button class="icon-btn" id="installBtn" hidden aria-label="Установить приложение" title="Установить">↓</button>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">DEIN DEUTSCH · GOETHE-ZERTIFIKAT A2</p>
-          <h1>Твоё немецкое<br><em>начинается здесь.</em></h1>
-          <p class="hero-sub">Слова, живые предложения и спокойная подготовка к Goethe-Zertifikat A2 — в твоём темпе.</p>
-          <button class="primary-btn" id="startBtn">Начать занятие <span>→</span></button>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="sun"></div><div class="art-card">
-            <span class="art-kicker">WORT DES TAGES</span>
-            <strong>der Alltag</strong>
-            <span>повседневная жизнь</span>
-            <div class="art-line"></div>
-            <span class="art-example">Ich lerne jeden Tag.</span>
-          </div>
-          <span class="art-star star-one">✳</span><span class="art-star star-two">✳</span>
-        </div>
-      </section>
-
-      <section class="stats-grid" aria-label="Твой прогресс">
-        <article class="stat-card"><span class="stat-label">Серия занятий</span><strong id="streak">0 <small>дней</small></strong><span class="stat-note">Регулярность — ключ</span></article>
-        <article class="stat-card"><span class="stat-label">Уроки завершены</span><strong id="lessonsDone">0</strong><span class="stat-note">Шаг за шагом</span></article>
-        <article class="stat-card"><span class="stat-label">Слова изучены</span><strong id="wordsKnown">0</strong><span class="stat-note">Твой словарный запас</span></article>
-      </section>
-
-      <section class="section-heading">
-        <div><p class="eyebrow">HEUTE · СЕГОДНЯ</p><h2>Твой учебный план</h2></div>
-        <span class="time-chip">◷ около 15 минут</span>
-      </section>
-
-      <section class="lesson-card" id="lessonCard">
-        <div class="lesson-meta"><span class="lesson-number" id="lessonNumber">УРОК 01</span><span class="lesson-tag" id="lessonTag">ЛЕКСИКА · ALLTAG</span></div>
-        <h3 id="lessonTitle">Повседневная жизнь</h3>
-        <p id="lessonDescription">10 полезных слов, короткая практика и мини-проверка.</p>
-        <div class="lesson-progress"><span id="lessonProgress"></span></div>
-        <div class="lesson-footer"><span id="lessonStatus">Можно начинать</span><button class="text-btn" id="continueBtn">Открыть урок →</button></div>
-      </section>
-
-      <section class="section-heading exam-heading"><div><p class="eyebrow">DEIN ZIEL · ТВОЯ ЦЕЛЬ</p><h2>Путь к Goethe A2</h2></div><span class="time-chip">A1 → A2</span></section>
-      <section class="lesson-card exam-card"><div class="lesson-meta"><span class="lesson-number">ЭКЗАМЕНАЦИОННАЯ ПРАКТИКА</span><span class="lesson-tag">GOETHE</span></div><h3>Четыре навыка — одна цель</h3><p>Постепенно добавим чтение, аудирование, письмо и разговорную практику. Сначала укрепим словарный запас.</p><div class="exam-skills"><span>Lesen · Чтение</span><span>Hören · Аудирование</span><span>Schreiben · Письмо</span><span>Sprechen · Речь</span></div><button class="secondary-btn" id="examBtn">Открыть тренировку A2</button></section>
-      <section class="bottom-grid">
-        <article class="small-panel">
-          <div class="panel-icon">✦</div><p class="eyebrow">WIEDERHOLUNG</p><h3>Повторение слов</h3>
-          <p>Возвращайся к словам, которые пока сложно вспомнить.</p>
-          <button class="secondary-btn" id="reviewBtn">Повторить слова</button>
-        </article>
-        <article class="small-panel quote-panel">
-          <p class="eyebrow">KLEINER SCHRITT</p>
-          <blockquote>„Übung macht den Meister.“</blockquote>
-          <p>Практика ведёт к мастерству.</p>
-        </article>
-      </section>
-      <section class="small-panel reminder-panel"><p class="eyebrow">ERINNERUNG · ПО ЖЕЛАНИЮ</p><h3>Напоминать о занятиях?</h3><p>Включай уведомления только если они тебе нужны. Время можно выбрать в настройках устройства.</p><button class="secondary-btn" id="reminderBtn">Включить напоминания</button><span class="reminder-status" id="reminderStatus">Сейчас выключены</span></section>
-      <p class="privacy-note"><span>●</span> Твои результаты хранятся только на этом устройстве.</p>
-    </main>
-    <footer><span>DEUTSCH MEISTER</span><span>GOETHE A2 · SCHRITT FÜR SCHRITT</span></footer>
-  </div>
-
-  <div class="modal-backdrop" id="lessonModal" hidden>
-    <section class="lesson-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="modal-top"><span class="eyebrow" id="modalStep">ШАГ 1 ИЗ 4</span><button class="close-btn" id="closeModal" aria-label="Закрыть">×</button></div>
-      <div class="modal-progress"><span id="modalProgress"></span></div>
-      <div id="lessonContent"></div>
-      <div class="modal-nav"><button class="secondary-btn" id="backBtn" disabled>Назад</button><button class="primary-btn" id="nextBtn">Далее <span>→</span></button></div>
-    </section>
-  </div>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
-</body>
-</html>
+<div class="app-shell">
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">de</span><span><b>Deutsch Meister</b><small>твой путь к Goethe-Zertifikat A2</small></span></a><span class="level-pill">A1 — A2</span></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">DEIN DEUTSCH · GOETHE-ZERTIFIKAT A2</p><h1>Жизнь с немецким начинается с усердия и желания</h1><p class="hero-sub">Слова, живые предложения и спокойная подготовка к Goethe-Zertifikat A2 — в твоём темпе.</p><button class="primary-btn" id="startBtn">Начать занятие <span>→</span></button></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="art-card"><span class="art-kicker">DEIN FORTSCHRITT</span><strong>Schritt für Schritt</strong><span>Каждый день — немного немецкого</span><div class="art-line"></div><span class="art-example">Übung macht den Meister.</span></div><span class="art-star star-one">✳</span><span class="art-star star-two">✳</span></div></section>
+<section class="stats-grid"><article class="stat-card"><span class="stat-label">Серия занятий</span><strong id="streak">0 <small>дней</small></strong><span class="stat-note">Регулярность — ключ</span></article><article class="stat-card"><span class="stat-label">Уроки завершены</span><strong id="lessonsDone">0</strong><span class="stat-note">Шаг за шагом</span></article><article class="stat-card"><span class="stat-label">Слова изучены</span><strong id="wordsKnown">0</strong><span class="stat-note">Твой словарный запас</span></article></section>
+<section class="section-heading"><div><p class="eyebrow">DEIN LERNWEG</p><h2>Твой учебный план</h2></div><span class="time-chip">от 15 минут</span></section>
+<section class="lesson-card"><div class="lesson-meta"><span class="lesson-number">ТВОЙ СЛЕДУЮЩИЙ ШАГ</span><span class="lesson-tag">A1 → A2</span></div><h3>Немецкий день за днём</h3><p>Практикуй слова, строй предложения и постепенно готовься к экзамену Goethe-Zertifikat A2.</p><div class="lesson-footer"><span>Лексика · Грамматика · Практика</span><button class="text-btn" id="continueBtn">Открыть занятие →</button></div></section>
+<section class="action-grid"><button class="action-card dictionary-card" id="dictionaryBtn"><span class="action-icon">Aa</span><span><b>Учить слова</b><small>Весь словарь A1–A2, прогресс и повторения</small></span><span class="arrow">→</span></button><button class="action-card" id="reviewBtn"><span class="action-icon">↻</span><span><b>Повторение</b><small>Вернись к словам, которые требуют внимания</small></span><span class="arrow">→</span></button><button class="action-card" id="examBtn"><span class="action-icon">✦</span><span><b>Подготовка к Goethe A2</b><small>Lesen · Hören · Schreiben · Sprechen</small></span><span class="arrow">→</span></button></section>
+<section class="small-panel reminder-panel"><p class="eyebrow">ERINNERUNG · ПО ЖЕЛАНИЮ</p><h3>Напоминать о занятиях?</h3><p>На iPhone уведомления сайта работают, если добавить его на экран «Домой» и открыть как приложение (iOS 16.4+). Для регулярной отправки напоминаний также нужен сервер уведомлений.</p><button class="secondary-btn" id="reminderBtn">Настроить уведомления</button><span class="reminder-status" id="reminderStatus">Сейчас выключены</span></section>
+<p class="privacy-note">● Результаты и прогресс хранятся на этом устройстве.</p>
+</main><footer><span>DEUTSCH MEISTER</span><span>GOETHE A2 · SCHRITT FÜR SCHRITT</span></footer></div>
+<div class="modal-backdrop" id="dictionaryModal" hidden><section class="modal dictionary-modal" role="dialog" aria-modal="true" aria-labelledby="dictTitle"><div class="modal-top"><div><p class="eyebrow">DEIN WORTSCHATZ</p><h2 id="dictTitle">Мой словарь</h2></div><button class="close-btn" data-close="dictionaryModal" aria-label="Закрыть">×</button></div><p class="modal-intro">Все доступные слова A1–A2 в одном месте. Нажми на 🔊, чтобы услышать произношение, или на i — чтобы открыть перевод и пояснение.</p><div class="dict-controls"><input id="searchInput" type="search" placeholder="Найти слово или перевод…"><select id="levelFilter"><option value="all">Все уровни</option><option value="A1">A1</option><option value="A2">A2</option></select><select id="topicFilter"><option value="all">Все темы</option></select></div><div class="dict-summary" id="dictSummary"></div><div class="legend"><span><i class="dot green"></i>0 ошибок</span><span><i class="dot yellow"></i>1–2 ошибки</span><span><i class="dot red"></i>3–5 ошибок</span><span><i class="dot gray"></i>новое</span></div><div id="wordList" class="word-list"></div></section></div>
+<div class="modal-backdrop" id="infoModal" hidden><section class="modal info-modal" role="dialog" aria-modal="true"><div class="modal-top"><p class="eyebrow">WORTERKLÄRUNG</p><button class="close-btn" data-close="infoModal" aria-label="Закрыть">×</button></div><h2 id="infoWord"></h2><p id="infoTranslation" class="translation-large"></p><p id="infoExample" class="example-box"></p><p id="infoNote" class="info-note"></p></section></div>
+<div class="modal-backdrop" id="lessonModal" hidden><section class="modal" role="dialog" aria-modal="true"><div class="modal-top"><div><p class="eyebrow">DEINE ÜBUNG</p><h2>Практика немецкого</h2></div><button class="close-btn" data-close="lessonModal">×</button></div><p class="modal-intro">Выбери слово, вспомни перевод и отметь, правильно ли ты ответил. Результат попадёт в статистику словаря.</p><div id="practiceArea"></div><div class="modal-actions"><button class="secondary-btn" id="showAnswerBtn">Показать перевод</button><button class="primary-btn" id="correctBtn">Я ответил правильно</button><button class="secondary-btn" id="wrongBtn">Была ошибка</button></div><p id="practiceFeedback" class="practice-feedback"></p></section></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><script src="app.js"></script>
+</body></html>

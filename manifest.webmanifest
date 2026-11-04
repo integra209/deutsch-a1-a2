@@ -1,25 +1,11 @@
 {
   "name": "Deutsch Meister — Goethe A2",
   "short_name": "Deutsch Meister",
-  "description": "Ежедневные занятия немецким по 15 минут.",
+  "description": "Немецкий A1–A2: слова, практика и подготовка к Goethe-Zertifikat A2.",
   "lang": "ru",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f5f0",
-  "theme_color": "#17385f",
-  "icons": [
-    {
-      "src": "icons/icon-180.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
-    }
-  ]
+  "background_color": "#f6f1e7",
+  "theme_color": "#18385f"
 }
